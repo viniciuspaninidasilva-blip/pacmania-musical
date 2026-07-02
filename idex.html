@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Chord Trainer - Makey Makey Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .maze-border {
+            border: 4px solid #2121DE;
+            box-shadow: 0 0 10px #2121DE, inset 0 0 10px #2121DE;
+        }
+
+        .pac-yellow { color: #FFD700; }
+        
+        .btn-game {
+            background: #2121DE;
+            transition: all 0.1s;
+            cursor: pointer;
+            font-size: 0.6rem;
+            border: 2px solid transparent;
+        }
+        .btn-game:hover, .btn-active {
+            background: #FFD700;
+            color: #000;
+            border-color: #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <header class="text-center py-6">
+        <h1 class="text-2xl md:text-4xl pac-yellow mb-2">PAC-CHORD</h1>
+        <p class="text-[10px] text-gray-400">Makey Makey Ready: Use A, S, D e Espaço</p>
+    </header>
+
+    <main class="w-full max-w-2xl maze-border p-6 rounded-lg bg-black/80">
+        <div id="chord-display" class="text-center py-4 text-2xl md:text-3xl mb-4 text-yellow-400">
+            SELECIONE UM ACORDE
+        </div>
+
+        <div id="chord-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            <!-- Os botões serão gerados dinamicamente ou listados aqui -->
+            <button onclick="selectChord('C')" class="btn-game p-3 rounded">Dó Maj</button>
+            <button onclick="selectChord('Cm')" class="btn-game p-3 rounded">Dó Min</button>
+            <button onclick="selectChord('D')" class="btn-game p-3 rounded">Ré Maj</button>
+            <button onclick="selectChord('Dm')" class="btn-game p-3 rounded">Ré Min</button>
+            <button onclick="selectChord('E')" class="btn-game p-3 rounded">Mi Maj</button>
+            <button onclick="selectChord('Em')" class="btn-game p-3 rounded">Mi Min</button>
+            <button onclick="selectChord('F')" class="btn-game p-3 rounded">Fá Maj</button>
+            <button onclick="selectChord('Fm')" class="btn-game p-3 rounded">Fá Min</button>
+            <button onclick="selectChord('G')" class="btn-game p-3 rounded">Sol Maj</button>
+            <button onclick="selectChord('Gm')" class="btn-game p-3 rounded">Sol Min</button>
+            <button onclick="selectChord('A')" class="btn-game p-3 rounded">Lá Maj</button>
+            <button onclick="selectChord('Am')" class="btn-game p-3 rounded">Lá Min</button>
+        </div>
+
+        <div id="note-buttons-container" class="grid grid-cols-3 gap-4 mb-6 opacity-50 transition-opacity duration-300">
+            <button id="note0" onclick="playSingleNote(0)" class="bg-purple-700 hover:bg-purple-500 py-6 rounded text-xs">[A] N1</button>
+            <button id="note1" onclick="playSingleNote(1)" class="bg-purple-700 hover:bg-purple-500 py-6 rounded text-xs">[S] N2</button>
+            <button id="note2" onclick="playSingleNote(2)" class="bg-purple-700 hover:bg-purple-500 py-6 rounded text-xs">[D] N3</button>
+        </div>
+
+        <div class="flex justify-center">
+            <button id="play-chord-btn" onclick="playChord()" class="bg-yellow-600 hover:bg-yellow-400 px-8 py-4 rounded-full text-black font-bold text-xs uppercase shadow-[0_0_15px_rgba(255,215,0,0.5)]">
+                [ESPAÇO] Tocar Tríade
+            </button>
+        </div>
+    </main>
+
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let selectedChord = null;
+        const chordKeys = Object.keys({
+            'C': 0, 'Cm': 0, 'D': 0, 'Dm': 0, 'E': 0, 'Em': 0, 'F': 0, 'Fm': 0, 'G': 0, 'Gm': 0, 'A': 0, 'Am': 0
+        });
+        let currentChordIndex = 0;
+
+        const chordData = {
+            'C': { freq: [261.63, 329.63, 392.00], names: ['Dó', 'Mi', 'Sol'] },
+            'Cm': { freq: [261.63, 311.13, 392.00], names: ['Dó', 'Mi♭', 'Sol'] },
+            'D': { freq: [293.66, 369.99, 440.00], names: ['Ré', 'Fá♯', 'Lá'] },
+            'Dm': { freq: [293.66, 349.23, 440.00], names: ['Ré', 'Fá', 'Lá'] },
+            'E': { freq: [329.63, 415.30, 493.88], names: ['Mi', 'Sol♯', 'Si'] },
+            'Em': { freq: [329.63, 392.00, 493.88], names: ['Mi', 'Sol', 'Si'] },
+            'F': { freq: [349.23, 440.00, 523.25], names: ['Fá', 'Lá', 'Dó'] },
+            'Fm': { freq: [349.23, 415.30, 523.25], names: ['Fá', 'Lá♭', 'Dó'] },
+            'G': { freq: [392.00, 493.88, 587.33], names: ['Sol', 'Si', 'Ré'] },
+            'Gm': { freq: [392.00, 466.16, 587.33], names: ['Sol', 'Si♭', 'Ré'] },
+            'A': { freq: [440.00, 554.37, 659.25], names: ['Lá', 'Dó♯', 'Mi'] },
+            'Am': { freq: [440.00, 523.25, 659.25], names: ['Lá', 'Dó', 'Mi'] }
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            
+            switch(e.key.toLowerCase()) {
+                case 'a': playSingleNote(0); flash('note0'); break;
+                case 's': playSingleNote(1); flash('note1'); break;
+                case 'd': playSingleNote(2); flash('note2'); break;
+                case ' ': e.preventDefault(); playChord(); flash('play-chord-btn'); break;
+                case 'arrowleft': navigateChord(-1); break;
+                case 'arrowright': navigateChord(1); break;
+            }
+        });
+
+        function flash(id) {
+            const el = document.getElementById(id);
+            el.classList.add('btn-active');
+            setTimeout(() => el.classList.remove('btn-active'), 150);
+        }
+
+        function navigateChord(dir) {
+            currentChordIndex = (currentChordIndex + dir + chordKeys.length) % chordKeys.length;
+            selectChord(chordKeys[currentChordIndex]);
+        }
+
+        function selectChord(c) {
+            selectedChord = c;
+            currentChordIndex = chordKeys.indexOf(c);
+            document.getElementById('chord-display').innerText = c.replace('m', ' Menor').replace(/[^A-Z ]/g, '') + (c.includes('m') ? '' : ' Maior');
+            document.getElementById('note-buttons-container').classList.remove('opacity-50');
+            
+            for(let i=0; i<3; i++) {
+                document.getElementById('note' + i).innerText = (i === 0 ? '[A] ' : i === 1 ? '[S] ' : '[D] ') + chordData[c].names[i];
+            }
+        }
+
+        function playTone(freq, duration = 0.5) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'square'; 
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function playSingleNote(index) {
+            if(!selectedChord) return;
+            playTone(chordData[selectedChord].freq[index], 0.6);
+        }
+
+        function playChord() {
+            if(!selectedChord) return;
+            chordData[selectedChord].freq.forEach(freq => playTone(freq, 1));
+        }
+    </script>
+</body>
+</html>
