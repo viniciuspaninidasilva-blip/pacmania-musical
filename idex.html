@@ -1,85 +1,1417 @@
+
+Conversa com o Gemini
+faça um jogo html assim Plano de Aula: Oficina PACMANIA MUSICAL
+
+
+
+Tema: Gamificação, Musicalização Criativa e Tecnologia Musical Interativa.
+
+Público-Alvo: Estudantes de música de nível iniciante/intermediário, crianças (a partir de 8 anos), jovens ou adultos iniciantes.
+
+Duração Total: 1h 30min (90 minutos).
+
+🔴 1. Objetivos Pedagógicos 
+
+Ao final desta oficina, o aluno deverá ser capaz de:
+
+Compreender e diferenciar os conceitos de altura/nota musical.
+
+Ler e registrar pequenas células melódicas simples em uma partitura digital.
+
+Manipular e disparar texturas sonoras e efeitos em tempo real através de uma interface física interativa (Makey Makey).
+
+
+
+REGRAS DO JOGO PACMANIA MUSICAL
+
+Com base na estrutura oficial do site PACMANIA MUSICAL (que indica o uso do tabuleiro físico com as conexões condutivas no Pac-Man e nos 3 fantasmas, integrando o Scratch e o MuseScore), preparei um jogo formatado como um plano de aula dinâmico e focado na pontuação por notas musicais.
+
+O jogo se chama "Desafio dos Fantasmas: Ditado Rítmico-Melódico".
+
+🎮 Jogo: Desafio dos Fantasmas (Pacman-ia Musical)
+
+📌 Estrutura do Tabuleiro (Conforme o Site)
+
+Pac-Man ➔ Seta para Cima (triades)
+
+Fantasma 1 ➔ Seta para Baixo (fundamental)
+
+Fantasma 2 ➔ Seta para Esquerda (terça)
+
+Fantasma 3 ➔ Seta para Direita (quinta)
+
+Barra de Aterramento ➔ Ligada ao "Earth" da placa (onde o aluno deve encostar a mão).
+
+🎼 Como Funciona o Jogo? (Dinâmica de Pontuação)
+
+O objetivo do aluno (controlando o Pac-Man) acertar as triades atravez dos fantasmas e do pacman tocando neles na ordem musical corretos. Em vez de pontos comuns, o aluno ganha Claves de Sol ou Figuras Musicais como moedas de pontuação.
+
+Passo 1: A Preparação no MuseScore (A "Voz" dos Fantasmas)
+
+O professor (ou um aluno líder) abre uma partitura simples no MuseScore contendo um ritmo curto de 4 tempos (por exemplo: duas semínimas e uma mínima).
+
+Cada nota na partitura corresponde a um personagem (Ex: Dó,mi,sol= Pac-Man, Do = Fantasma 1, Mi = Fantasma 2, Sol = Fantasma 3).
+
+Passo 2: O Gameplay no Scratch (A Execução e Placar)
+
+No Scratch, criamos um sistema simples com uma pauta:
+
+Fase de Escuta: O computador toca a sequência curta gerada no MuseScore. O aluno precisa prestar atenção em qual sequencia a triade foi tocada.
+
+Fase de Ação: O aluno segura a barra de aterramento do tabuleiro e deve tocar fisicamente nos personagens correspondentes, seguindo o ritmo que acabou de ouvir.
+
+O Placar de Notas:
+
+Acerto de sequencia: Se ele pressionar o personagem certo na ordem certa, o Scratch exibe uma calve de sol na tela e adiciona 10 pontos.
+
+Erro: Se errar o personagem, o som do clássico "Game Over" do Pac-Man toca, e o jogador perde 5 pontos.
+
+💻 Programação no Scratch para este Tabuleiro
+
+Para validar a pontuação e os comandos físicos do site, a lógica de blocos dentro do Scratch roda em um sistema de listas:
+
+Crie uma Lista chamada Gabarito (onde o jogo armazena a sequência correta, ex: [Pac-Man, Fantasma 2, Fantasma 1]).
+
+Crie uma Lista chamada Resposta do Aluno.
+
+Toda vez que o aluno toca em um elemento do tabuleiro físico:
+
+Se tocar no Pac-Man: Adiciona "Pac-Man" à lista Resposta do Aluno e toca o som correspondente.
+
+Validação: Ao final da sequência, o Scratch compara as duas listas. Se estiverem iguais, o placar atualiza: "Parabéns! Você capturou os fantasmas! +30 Notas Musicais!"
+
+🎯 Benefício Pedagógico (Alinhado com o Site)
+
+O jogo tira a teoria musical do papel e a transforma em uma experiência tátil de percepção auditiva no Scratch. Ao final da aula, os alunos competem para ver quem consegue a maior pontuação em "claves de sol", estimulando a memória e a leitura de partituras de forma gamificada.
+
+🔴 2. Eixos Pedagógicos (O "Porquê")
+
+Eixo Tecnológico-Criativo: Desmistificar o ensino musical digital interativo. As tecnologias são ferramentas de expressão, tirando o aluno da posição de mero consumidor de música para a de compositor.
+
+Eixo Corpóreo-Interativo: A neurobiologia da aprendizagem musical prova que associar o som ao tato e ao movimento fixador melhora a retenção cognitiva. O Makey Makey e o tabuleiro físico transformam a teoria abstrata em feedback tátil imediato.
+
+Eixo da Gamificação: Transformar o erro em "tentativa do jogo" reduz a ansiedade de performance (o medo de errar a nota), mantendo o nível de dopamina e engajamento altos através do lúdico.
+
+🔴 3. Recursos e Materiais
+
+1 Computador/Notebook com acesso à internet.
+
+1 Kit Makey Makey (com a placa e os cabos jacaré).
+
+O tabuleiro físico customizado da "PACMANIA MUSICAL" (com as conexões condutivas no Pac-Man e nos 3 fantasmas, totalizando 4 pontos de comando + 1 barra de aterramento/terra).
+
+Caixas de som ou fones de ouvido.
+
+🔴 4. Passo a Passo Detalhado (1h 30min)
+
+Parte 1: Introdução e Conexão Humana (15 minutos)
+
+Acolhimento e Contextualização (5 min): Apresentação do tema. Breve conversa sobre o jogo original do Pac-Man e como podemos transformar o jogo em um divertido ambiente de ensino musical.
+
+Explorando a Tecnologia (10 min): Mostrar o tabuleiro e a placa Makey Makey. Explicar o conceito de circuito elétrico fechado usando o próprio corpo humano (o conceito do "Fio Terra" que o aluno precisa segurar). Fazer um teste rápido onde os alunos tocam no Pac-Man do tabuleiro e ouvem o primeiro som disparado no computador.
+
+Parte 2: A Fábrica de Sons – MuseScore & BandLab (30 minutos)
+
+Passo 1: Criando a Identidade do Pac-Man no MuseScore (15 min):
+
+Abra o MuseScore projetado para a turma.
+
+Peça aos alunos para criarem uma melodia curtíssima de 4 notas (ex: Do, Re, Mi, Fa ou um arpejo menor) que represente o Pac-Man andando.
+
+Ensine como exportar esse trecho em formato WAV/MP3. Aqui eles aprendem escrita musical elementar e exportação de áudio.
+
+Passo 2: Construindo o Ambiente no BandLab (15 min):
+
+Importe o áudio gerado no MuseScore para o Sampler do BandLab (a ferramenta que mapeia sons em teclas do teclado).
+
+Mapeie a melodia do Pac-Man na tecla Espaço.
+
+Escolha 3 loops ou efeitos sonoros nativos do BandLab para representar a personalidade dos 3 fantasmas (ex: Fantasma 1 = uma batida misteriosa na tecla Seta para Cima; Fantasma 2 = um efeito de sintetizador espacial na Seta para Baixo; Fantasma 3 = um som de suspense na Seta para a Esquerda).
+
+Parte 3: A Instalação Elétrica (15 minutos)
+
+Ligando o Tabuleiro (15 min): Hora de conectar a placa física ao ambiente virtual.
+
+Conecte o clipe jacaré do Pac-Man na tecla Espaço da placa.
+
+Conecte os clipes dos 3 fantasmas nas respectivas setas (Cima, Baixo, Esquerda).
+
+Explique a regra do jogo aos alunos: um aluno será o "Aterramento" (segura o cabo interligado ao Earth da placa) e, ao tocar com a outra mão nos personagens do tabuleiro, o som correspondente que criamos no BandLab vai ecoar na sala.
+
+Parte 4: A Performance "PACMANIA" (20 minutos)
+
+A Dinâmica do Jogo Musical (20 min): Divida a turma em pequenos grupos (ou faça um revezamento individual se for pouca gente).
+
+O Desafio: O professor dita uma "narrativa de jogo". Exemplo: "O Pac-Man está andando tranquilamente no labirinto (o aluno do Pac-Man toca repetidamente criando o ritmo), de repente o Fantasma Vermelho aparece correndo atrás dele! (o aluno do Fantasma ativa seu loop barulhento), o Pac-Man come a super pílula e vira o jogo! (muda a dinâmica)".
+
+Os alunos devem improvisar ao vivo tocando no tabuleiro físico de acordo com os comandos da história, criando uma trilha sonora interativa em tempo real.
+
+Parte 5: Encerramento e Reflexão (10 minutos)
+
+Roda de Conversa (10 min): Questionar os alunos sobre a experiência.
+
+O que foi mais difícil: escrever as notas no papel digital (MuseScore) ou controlar o tempo do som no tabuleiro físico?
+
+Fazer a ponte final: mostrar que os botões de um videogame, os teclados musicais modernos e essa oficina usam exatamente a mesma lógica de programação e sensibilidade musical.
+
+Aqui está um jogo completo em HTML, CSS e JavaScript que simula toda a dinâmica da sua oficina PACMANIA MUSICAL.
+
+Este jogo recria a lógica que seria feita no Scratch e no Makey Makey: ele gera uma sequência musical (o gabarito do MuseScore), permite que o aluno ouça a sequência e depois use o teclado (simulando os comandos físicos do Makey Makey) para responder. Ele inclui o sistema de pontuação com Claves de Sol, listas de validação e feedback visual dos personagens.
+
+Como usar:
+Copie o código abaixo.
+
+Cole em um arquivo de texto e salve com o nome pacmania_musical.html.
+
+Dê dois cliques no arquivo salvo para abrir e jogar diretamente em qualquer navegador!
+
+HTML
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pac-Man Arcade Synthesizer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Oficina PACMANIA MUSICAL - O Jogo</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-        body { font-family: 'Press Start 2P', cursive; background-color: #000; color: #ffeb3b; }
-        .arcade-btn { transition: all 0.1s; border: 4px solid #2196f3; }
-        .active { transform: scale(0.95); background-color: #ffeb3b !important; color: #000 !important; box-shadow: 0 0 20px #ffeb3b; }
-        .maze-border { border: 2px solid #2196f3; }
+        :root {
+            --bg-color: #050515;
+            --panel-color: #101030;
+            --pacman-color: #FFD700;
+            --ghost1-color: #FF0000;
+            --ghost2-color: #00FFED;
+            --ghost3-color: #FFB8FF;
+            --text-color: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--panel-color);
+            border: 4px solid #1919A4;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--pacman-color);
+            margin-top: 0;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px #000;
+        }
+
+        .hud {
+            display: flex;
+            justify-content: space-around;
+            background-color: #000;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid #1919A4;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .score-box {
+            color: #FFB800;
+        }
+
+        .status-box {
+            color: #00FF00;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background-color: #000;
+            border: 3px solid #333;
+            border-radius: 10px;
+            padding: 20px 10px;
+            cursor: pointer;
+            transition: transform 0.1s, border-color 0.1s;
+            user-select: none;
+        }
+
+        .card:active, .card.active {
+            transform: scale(0.95);
+        }
+
+        .card-pacman { border-color: var(--pacman-color); }
+        .card-pacman.active { background-color: rgba(255, 215, 0, 0.2); }
+        .card-g1 { border-color: var(--ghost1-color); }
+        .card-g1.active { background-color: rgba(255, 0, 0, 0.2); }
+        .card-g2 { border-color: var(--ghost2-color); }
+        .card-g2.active { background-color: rgba(0, 255, 237, 0.2); }
+        .card-g3 { border-color: var(--ghost3-color); }
+        .card-g3.active { background-color: rgba(255, 184, 255, 0.2); }
+
+        .sprite {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .controls {
+            margin-top: 25px;
+        }
+
+        button {
+            background-color: #00FF00;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 4px #00AA00;
+        }
+
+        button:hover { background-color: #33FF33; }
+        button:active {
+            box-shadow: 0 0 #00AA00;
+            transform: translateY(4px);
+        }
+
+        .lists-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+            background: #000;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            text-align: left;
+        }
+
+        .list-box h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .list-content {
+            color: #00FFED;
+            word-wrap: break-word;
+        }
+
+        .footer-info {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-4">
+<body>
 
-    <h1 class="text-2xl md:text-4xl mb-8 tracking-widest text-yellow-400 animate-pulse">PAC-MAN SINT</h1>
-    
-    <div class="grid grid-cols-2 gap-6 p-8 maze-border rounded-lg bg-slate-900 shadow-[0_0_30px_rgba(33,150,243,0.3)]">
-        <div id="key-arrowup" class="arcade-btn w-24 h-24 flex items-center justify-center rounded-xl cursor-pointer bg-slate-800 hover:bg-slate-700">▲</div>
-        <div id="key-arrowleft" class="arcade-btn w-24 h-24 flex items-center justify-center rounded-xl cursor-pointer bg-slate-800 hover:bg-slate-700 font-bold text-xs text-center">◀<br>(TRÍADE)</div>
-        <div id="key-arrowdown" class="arcade-btn w-24 h-24 flex items-center justify-center rounded-xl cursor-pointer bg-slate-800 hover:bg-slate-700">▼</div>
-        <div id="key-arrowright" class="arcade-btn w-24 h-24 flex items-center justify-center rounded-xl cursor-pointer bg-slate-800 hover:bg-slate-700">▶</div>
-    </div>
+    <div class="game-container">
+        <h1>Desafio dos Fantasmas: Pacmania Musical</h1>
+        <p>Mapeamento Makey Makey ativo! Use o mouse ou as setas do teclado + barra de espaço.</p>
 
-    <p class="mt-8 text-blue-500 text-sm">Use o Makey Makey ou as Setas do Teclado</p>
+        <div class="hud">
+            <div class="score-box">🎼 Pontuação: <span id="score">0</span> Claves de Sol</div>
+            <div class="status-box" id="game-status">Aguardando início...</div>
+        </div>
 
-    <script>
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        <div class="board">
+            <div class="card card-pacman" id="btn-pacman" onclick="playerInput('Pac-Man (Tríade)')">
+                <span class="sprite">📐</span>
+                <strong>Pac-Man</strong>
+                <div style="font-size: 0.8rem; margin-top:5px; color: var(--pacman-color);">[Espaço] ou [Seta Cima]</div>
+                <div style="color: #aaa; font-size: 0.9rem;">Tríade</div>
+            </div>
+
+            <div class="card card-g1" id="btn-g1" onclick="playerInput('Fantasma 1 (Fundamental)')">
+                <span class="sprite">🔴</span>
+                <strong>Fantasma 1</strong>
+                <div style="font-size: 0.8rem; margin-top:5px; color: var(--ghost1-color);">[Seta Baixo]</div>
+                <div style="color: #aaa; font-size: 0.9rem;">Fundamental (Dó)</div>
+            </div>
+
+            <div class="card card-g2" id="btn-g2" onclick="playerInput('Fantasma 2 (Terça)')">
+                <span class="sprite">🔵</span>
+                <strong>Fantasma 2</strong>
+                <div style="font-size: 0.8rem; margin-top:5px; color: var(--ghost2-color);">[Seta Esquerda]</div>
+                <div style="color: #aaa; font-size: 0.9rem;">Terça (Mi)</div>
+            </div>
+
+            <div class="card card-g3" id="btn-g3" onclick="playerInput('Fantasma 3 (Quinta)')">
+                <span class="sprite">🌸</span>
+                <strong>Fantasma 3</strong>
+                <div style="font-size: 0.8rem; margin-top:5px; color: var(--ghost3-color);">[Seta Direita]</div>
+                <div style="color: #aaa; font-size: 0.9rem;">Quinta (Sol)</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" onclick="startRound()">Ouvir Ditado Melódico</button>
+        </div>
+
+        <div class="lists-container">
+            <div class="list-box">
+                <h3 style="color: #FF3333;">📋 Lista: Gabarito (MuseScore)</h3>
+                <div id="list-gabarito" class="list-content">[]</div>
+            </div>
+            <div class="list-box">
+                <h
+faça um jogo html assim Plano de Aula: Oficina PACMANIA MUSICAL
+
+
+
+Tema: Gamificação, Musicalização Criativa e Tecnologia Musical Interativa.
+
+Público-Alvo: Estudantes de música de nível iniciante/intermediário, crianças (a partir de 8 anos), jovens ou adultos iniciantes.
+
+Duração Total: 1h 30min (90 minutos).
+
+🔴 1. Objetivos Pedagógicos 
+
+Ao final desta oficina, o aluno deverá ser capaz de:
+
+Compreender e diferenciar os conceitos de altura/nota musical.
+
+Ler e registrar pequenas células melódicas simples em uma partitura digital.
+
+Manipular e disparar texturas sonoras e efeitos em tempo real através de uma interface física interativa (Makey Makey).
+
+
+
+REGRAS DO JOGO PACMANIA MUSICAL
+
+Com base na estrutura oficial do site PACMANIA MUSICAL (que indica o uso do tabuleiro físico com as conexões condutivas no Pac-Man e nos 3 fantasmas, integrando o Scratch e o MuseScore), preparei um jogo formatado como um plano de aula dinâmico e focado na pontuação por notas musicais.
+
+O jogo se chama "Desafio dos Fantasmas: Ditado Rítmico-Melódico".
+
+🎮 Jogo: Desafio dos Fantasmas (Pacman-ia Musical)
+
+📌 Estrutura do Tabuleiro (Conforme o Site)
+
+Pac-Man ➔ Seta para Cima (triades)
+
+Fantasma 1 ➔ Seta para Baixo (fundamental)
+
+Fantasma 2 ➔ Seta para Esquerda (terça)
+
+Fantasma 3 ➔ Seta para Direita (quinta)
+
+Barra de Aterramento ➔ Ligada ao "Earth" da placa (onde o aluno deve encostar a mão).
+
+🎼 Como Funciona o Jogo? (Dinâmica de Pontuação)
+
+O objetivo do aluno (controlando o Pac-Man) acertar as triades atravez dos fantasmas e do pacman tocando neles na ordem musical corretos. Em vez de pontos comuns, o aluno ganha Claves de Sol ou Figuras Musicais como moedas de pontuação.
+
+Passo 1: A Preparação no MuseScore (A "Voz" dos Fantasmas)
+
+O professor (ou um aluno líder) abre uma partitura simples no MuseScore contendo um ritmo curto de 4 tempos (por exemplo: duas semínimas e uma mínima).
+
+Cada nota na partitura corresponde a um personagem (Ex: Dó,mi,sol= Pac-Man, Do = Fantasma 1, Mi = Fantasma 2, Sol = Fantasma 3).
+
+Passo 2: O Gameplay no Scratch (A Execução e Placar)
+
+No Scratch, criamos um sistema simples com uma pauta:
+
+Fase de Escuta: O computador toca a sequência curta gerada no MuseScore. O aluno precisa prestar atenção em qual sequencia a triade foi tocada.
+
+Fase de Ação: O aluno segura a barra de aterramento do tabuleiro e deve tocar fisicamente nos personagens correspondentes, seguindo o ritmo que acabou de ouvir.
+
+O Placar de Notas:
+
+Acerto de sequencia: Se ele pressionar o personagem certo na ordem certa, o Scratch exibe uma calve de sol na tela e adiciona 10 pontos.
+
+Erro: Se errar o personagem, o som do clássico "Game Over" do Pac-Man toca, e o jogador perde 5 pontos.
+
+💻 Programação no Scratch para este Tabuleiro
+
+Para validar a pontuação e os comandos físicos do site, a lógica de blocos dentro do Scratch roda em um sistema de listas:
+
+Crie uma Lista chamada Gabarito (onde o jogo armazena a sequência correta, ex: [Pac-Man, Fantasma 2, Fantasma 1]).
+
+Crie uma Lista chamada Resposta do Aluno.
+
+Toda vez que o aluno toca em um elemento do tabuleiro físico:
+
+Se tocar no Pac-Man: Adiciona "Pac-Man" à lista Resposta do Aluno e toca o som correspondente.
+
+Validação: Ao final da sequência, o Scratch compara as duas listas. Se estiverem iguais, o placar atualiza: "Parabéns! Você capturou os fantasmas! +30 Notas Musicais!"
+
+🎯 Benefício Pedagógico (Alinhado com o Site)
+
+O jogo tira a teoria musical do papel e a transforma em uma experiência tátil de percepção auditiva no Scratch. Ao final da aula, os alunos competem para ver quem consegue a maior pontuação em "claves de sol", estimulando a memória e a leitura de partituras de forma gamificada.
+
+🔴 2. Eixos Pedagógicos (O "Porquê")
+
+Eixo Tecnológico-Criativo: Desmistificar o ensino musical digital interativo. As tecnologias são ferramentas de expressão, tirando o aluno da posição de mero consumidor de música para a de compositor.
+
+Eixo Corpóreo-Interativo: A neurobiologia da aprendizagem musical prova que associar o som ao tato e ao movimento fixador melhora a retenção cognitiva. O Makey Makey e o tabuleiro físico transformam a teoria abstrata em feedback tátil imediato.
+
+Eixo da Gamificação: Transformar o erro em "tentativa do jogo" reduz a ansiedade de performance (o medo de errar a nota), mantendo o nível de dopamina e engajamento altos através do lúdico.
+
+🔴 3. Recursos e Materiais
+
+1 Computador/Notebook com acesso à internet.
+
+1 Kit Makey Makey (com a placa e os cabos jacaré).
+
+O tabuleiro físico customizado da "PACMANIA MUSICAL" (com as conexões condutivas no Pac-Man e nos 3 fantasmas, totalizando 4 pontos de comando + 1 barra de aterramento/terra).
+
+Caixas de som ou fones de ouvido.
+
+🔴 4. Passo a Passo Detalhado (1h 30min)
+
+Parte 1: Introdução e Conexão Humana (15 minutos)
+
+Acolhimento e Contextualização (5 min): Apresentação do tema. Breve conversa sobre o jogo original do Pac-Man e como podemos transformar o jogo em um divertido ambiente de ensino musical.
+
+Explorando a Tecnologia (10 min): Mostrar o tabuleiro e a placa Makey Makey. Explicar o conceito de circuito elétrico fechado usando o próprio corpo humano (o conceito do "Fio Terra" que o aluno precisa segurar). Fazer um teste rápido onde os alunos tocam no Pac-Man do tabuleiro e ouvem o primeiro som disparado no computador.
+
+Parte 2: A Fábrica de Sons – MuseScore & BandLab (30 minutos)
+
+Passo 1: Criando a Identidade do Pac-Man no MuseScore (15 min):
+
+Abra o MuseScore projetado para a turma.
+
+Peça aos alunos para criarem uma melodia curtíssima de 4 notas (ex: Do, Re, Mi, Fa ou um arpejo menor) que represente o Pac-Man andando.
+
+Ensine como exportar esse trecho em formato WAV/MP3. Aqui eles aprendem escrita musical elementar e exportação de áudio.
+
+Passo 2: Construindo o Ambiente no BandLab (15 min):
+
+Importe o áudio gerado no MuseScore para o Sampler do BandLab (a ferramenta que mapeia sons em teclas do teclado).
+
+Mapeie a melodia do Pac-Man na tecla Espaço.
+
+Escolha 3 loops ou efeitos sonoros nativos do BandLab para representar a personalidade dos 3 fantasmas (ex: Fantasma 1 = uma batida misteriosa na tecla Seta para Cima; Fantasma 2 = um efeito de sintetizador espacial na Seta para Baixo; Fantasma 3 = um som de suspense na Seta para a Esquerda).
+
+Parte 3: A Instalação Elétrica (15 minutos)
+
+Ligando o Tabuleiro (15 min): Hora de conectar a placa física ao ambiente virtual.
+
+Conecte o clipe jacaré do Pac-Man na tecla Espaço da placa.
+
+Conecte os clipes dos 3 fantasmas nas respectivas setas (Cima, Baixo, Esquerda).
+
+Explique a regra do jogo aos alunos: um aluno será o "Aterramento" (segura o cabo interligado ao Earth da placa) e, ao tocar com a outra mão nos personagens do tabuleiro, o som correspondente que criamos no BandLab vai ecoar na sala.
+
+Parte 4: A Performance "PACMANIA" (20 minutos)
+
+A Dinâmica do Jogo Musical (20 min): Divida a turma em pequenos grupos (ou faça um revezamento individual se for pouca gente).
+
+O Desafio: O professor dita uma "narrativa de jogo". Exemplo: "O Pac-Man está andando tranquilamente no labirinto (o aluno do Pac-Man toca repetidamente criando o ritmo), de repente o Fantasma Vermelho aparece correndo atrás dele! (o aluno do Fantasma ativa seu loop barulhento), o Pac-Man come a super pílula e vira o jogo! (muda a dinâmica)".
+
+Os alunos devem improvisar ao vivo tocando no tabuleiro físico de acordo com os comandos da história, criando uma trilha sonora interativa em tempo real.
+
+Parte 5: Encerramento e Reflexão (10 minutos)
+
+Roda de Conversa (10 min): Questionar os alunos sobre a experiência.
+
+O que foi mais difícil: escrever as notas no papel digital (MuseScore) ou controlar o tempo do som no tabuleiro físico?
+
+Fazer a ponte final: mostrar que os botões de um videogame, os teclados musicais modernos e essa oficina usam exatamente a mesma lógica de programação e sensibilidade musical.
+
+Para dar vida a essa maravilhosa oficina de musicalização e gamificação, preparei uma aplicação web completa e imersiva chamada PACMANIA MUSICAL - Simulador e Ambiente de Aula.
+
+Esta aplicação foi desenvolvida em um único arquivo interativo contendo:
+
+O Simulador Virtual do Jogo "Desafio dos Fantasmas": Onde o aluno escuta os ditados melódicos gerados por uma "pauta virtual" (que simula a partitura do MuseScore) e deve responder tocando nas teclas correspondentes do Makey Makey ou clicando nos personagens na ordem e tempo corretos.
+
+Sistema de Listas do Scratch Interativo: Uma interface visual que mostra em tempo real as listas de "Gabarito" e "Resposta do Aluno", exatamente como proposto na lógica de programação da oficina.
+
+Pauta Musical Dinâmica: Com notas que acendem na clave de sol conforme os sons são tocados.
+
+Gerador de Sintetizador Web Audio API: Sons reais e personalizados para cada personagem (com frequências de tríade de Dó Maior e efeitos lúdicos semelhantes a sintetizadores retro de jogos).
+
+Painel do Professor (Modo Oficina / Roteiro Integrado): O plano de aula, o passo a passo, o mapeamento físico do Makey Makey e o roteiro de narrativas lúdicas integrado diretamente na barra lateral para que o instrutor guie a aula enquanto utiliza a aplicação.
+
+Vou gerar agora o arquivo completo com interface visual moderna, amigável e acessível. Use os botões da tela ou as teclas do teclado mapeadas para simular o Makey Makey!
+
+HTML
+:Pacmania Musical - Simulador de Jogo e Oficina:pacmania_musical.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacmania Musical - Simulador & Oficina Interativa</title>
+    <!-- Tailwind CSS para um design limpo e moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts para tipografia gamer e amigável -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka+One&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b0c1b;
+            color: #f1f3f9;
+        }
+        .pixel-font {
+            font-family: 'Press Start 2P', monospace;
+        }
+        .title-font {
+            font-family: 'Fredoka One', sans-serif;
+        }
+        .sound-wave {
+            display: inline-block;
+            width: 3px;
+            height: 20px;
+            background-color: #ffd700;
+            margin: 0 2px;
+            animation: bounce 0.6s infinite alternate;
+        }
+        .sound-wave:nth-child(2) { animation-delay: 0.15s; }
+        .sound-wave:nth-child(3) { animation-delay: 0.3s; }
+        .sound-wave:nth-child(4) { animation-delay: 0.45s; }
+        @keyframes bounce {
+            from { height: 4px; }
+            to { height: 24px; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- CABEÇALHO -->
+    <header class="bg-indigo-950 border-b-4 border-yellow-400 p-4 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <span class="text-4xl animate-bounce">🍕</span>
+                <div>
+                    <h1 class="text-yellow-400 title-font text-3xl md:text-4xl tracking-wider text-center md:text-left">
+                        PACMANIA MUSICAL
+                    </h1>
+                    <p class="text-xs md:text-sm text-indigo-200 uppercase tracking-widest font-semibold">
+                        Gamificação, Musicalização Criativa & Tecnologia Interativa
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Barra de Status Rápido do Makey Makey -->
+            <div class="flex items-center gap-3 bg-indigo-900 border border-indigo-700 px-4 py-2 rounded-full">
+                <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse" id="status-circuito"></div>
+                <div class="text-xs font-semibold text-green-300">
+                    MAKEY MAKEY: <span class="uppercase">Habilitado</span>
+                </div>
+                <div class="text-xs text-indigo-300 border-l border-indigo-700 pl-3">
+                    Segure o <kbd class="bg-indigo-950 px-1.5 py-0.5 rounded text-white border border-indigo-500 font-mono">Terra</kbd> (Espaço)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="max-w-7xl mx-auto p-4 w-full flex-grow grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         
-        // Mapeamento das frequências das Setas (ArrowUp, ArrowLeft, ArrowDown, ArrowRight)
-        const NOTES = {
-            'arrowup': [261.63], 
-            'arrowdown': [329.63], 
-            'arrowright': [392.00],
-            'arrowleft': [261.63, 329.63, 392.00] // Tríade Dó Maior
+        <!-- COLUNA ESQUERDA: SIMULADOR DO JOGO (8 Colunas) -->
+        <section class="lg:col-span-8 flex flex-col gap-6">
+            
+            <!-- PAINEL DE CONTROLE DO DITADO -->
+            <div class="bg-slate-900 border-2 border-slate-800 rounded-2xl p-5 shadow-inner">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+                    <div class="text-center sm:text-left">
+                        <h2 class="text-xl font-bold text-white flex items-center gap-2 justify-center sm:justify-start">
+                            🔊 DESAFIO DOS FANTASMAS <span class="text-xs bg-red-500 text-white font-mono px-2 py-0.5 rounded-full uppercase">DITADO</span>
+                        </h2>
+                        <p class="text-slate-400 text-xs mt-1">
+                            Escute a melodia do MuseScore e reproduza tocando nos personagens corretos!
+                        </p>
+                    </div>
+                    
+                    <!-- Pontuação e Moedas -->
+                    <div class="flex items-center gap-4">
+                        <div class="bg-black border-2 border-yellow-500 px-4 py-2 rounded-xl text-center">
+                            <div class="text-[10px] text-yellow-500 font-mono tracking-wider uppercase font-bold">Claves de Sol</div>
+                            <div class="text-2xl font-bold text-yellow-400 flex items-center justify-center gap-1">
+                                <span class="pixel-font" id="placar-claves">0</span>
+                                <span class="text-xl">🎼</span>
+                            </div>
+                        </div>
+                        <div class="bg-black border-2 border-indigo-500 px-4 py-2 rounded-xl text-center">
+                            <div class="text-[10px] text-indigo-400 font-mono tracking-wider uppercase font-bold">Erros</div>
+                            <div class="text-2xl font-bold text-red-500 flex items-center justify-center gap-1">
+                                <span class="pixel-font" id="placar-erros">0</span>
+                                <span class="text-xl">👾</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTROLES DO JOGO -->
+                <div class="flex flex-wrap items-center justify-center sm:justify-between gap-4 bg-slate-950 p-4 rounded-xl border border-slate-800">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button onclick="gerarNovoDitado()" class="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg hover:shadow-yellow-500/20 transform hover:-translate-y-0.5 active:translate-y-0 transition duration-150 flex items-center gap-2">
+                            <span>🎮</span> GERAR DITADO (Nível 1)
+                        </button>
+                        <button id="btn-reproduzir" onclick="reproduzirGabarito()" disabled class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm px-5 py-2.5 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5 active:translate-y-0 transition duration-150 flex items-center gap-2 shadow-lg">
+                            <span>🔊</span> REPRODUZIR DITADO
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-slate-400 font-semibold uppercase">Modo:</span>
+                        <select id="config-tamanho" class="bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs text-indigo-300 font-bold focus:outline-none focus:border-indigo-500">
+                            <option value="3">3 Notas (Fácil)</option>
+                            <option value="4" selected>4 Notas (Médio)</option>
+                            <option value="5">5 Notas (Desafio!)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- FEEDBACK VISUAL DE FEEDBACK DO JOGO -->
+                <div id="mensagem-status" class="mt-4 bg-indigo-950/40 border border-indigo-900/60 p-3 rounded-xl text-center text-sm font-semibold text-indigo-300 flex items-center justify-center gap-2">
+                    Clique em "Gerar Ditado" para ouvir as notas e começar a jogar!
+                </div>
+            </div>
+
+            <!-- PAUTA MUSICAL DIGITAL -->
+            <div class="bg-white text-slate-950 p-6 rounded-2xl shadow-xl border-4 border-slate-300 relative overflow-hidden">
+                <div class="absolute top-2 left-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest font-mono">Pauta Musical Virtual</div>
+                <div class="absolute top-2 right-3 text-xs bg-slate-200 font-bold px-2 py-0.5 rounded text-slate-600 flex items-center gap-1">
+                    <span id="pauta-modo">Modo: Escuta/Estudo</span>
+                </div>
+                
+                <!-- Clave de Sol e Linhas -->
+                <div class="relative h-32 mt-4 flex items-center">
+                    <!-- Linhas da Pauta (5 Linhas) -->
+                    <div class="absolute inset-0 flex flex-col justify-between py-1 pointer-events-none">
+                        <div class="w-full h-[2px] bg-slate-800"></div>
+                        <div class="w-full h-[2px] bg-slate-800"></div>
+                        <div class="w-full h-[2px] bg-slate-800"></div>
+                        <div class="w-full h-[2px] bg-slate-800"></div>
+                        <div class="w-full h-[2px] bg-slate-800"></div>
+                    </div>
+
+                    <!-- Clave de Sol Visual -->
+                    <div class="absolute left-2 z-10 text-6xl select-none leading-none -mt-4 text-slate-800">🎼</div>
+
+                    <!-- Notas Musicais Interativas da Pauta -->
+                    <div id="pauta-container" class="absolute left-24 right-4 inset-y-0 flex items-center justify-around">
+                        <!-- Notas geradas via JS entrarão aqui -->
+                        <div class="text-slate-400 italic text-sm text-center w-full">Nenhuma nota ativa. Gere um ditado ou toque nos personagens!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABULEIRO / CONTROLADORES (SIMULADOR MAKEY MAKEY) -->
+            <div class="bg-slate-900 border-2 border-slate-800 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+                    <h3 class="text-md font-bold text-slate-300 flex items-center gap-2">
+                        🎮 TABULEIRO "PACMANIA" (Clique ou use o teclado)
+                    </h3>
+                    <div class="text-xs text-yellow-400 font-mono font-bold">
+                        Modo Teclado: Setas & Espaço
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                    
+                    <!-- PAC-MAN (Seta para Cima ou Espaço) -->
+                    <button id="btn-pacman" onclick="tocarPersonagem('Pac-Man', 261.63, 'C4')" class="group relative bg-amber-950/40 border-4 border-yellow-500 rounded-2xl p-4 flex flex-col items-center justify-between gap-3 text-center transition-all duration-150 hover:bg-amber-900/60 focus:outline-none focus:ring-4 focus:ring-yellow-400/50 transform hover:-translate-y-1">
+                        <div class="absolute top-2 right-2 text-[10px] font-bold bg-yellow-500 text-black px-1.5 py-0.5 rounded font-mono uppercase">⬆️ Cima</div>
+                        <span class="text-5xl group-hover:scale-110 transition duration-150 py-3">🍕</span>
+                        <div>
+                            <span class="font-bold text-yellow-400 block text-lg">Pac-Man</span>
+                            <span class="text-[10px] text-yellow-300 font-semibold tracking-wider uppercase block bg-yellow-950/80 px-2 py-0.5 rounded-full border border-yellow-500/40 mt-1">Tríade Maior (Dó-Mi-Sol)</span>
+                        </div>
+                    </button>
+
+                    <!-- FANTASMA 1 (Seta para Baixo) -->
+                    <button id="btn-ghost1" onclick="tocarPersonagem('Fantasma 1', 261.63, 'C4')" class="group relative bg-red-950/40 border-4 border-red-500 rounded-2xl p-4 flex flex-col items-center justify-between gap-3 text-center transition-all duration-150 hover:bg-red-900/60 focus:outline-none focus:ring-4 focus:ring-red-500/50 transform hover:-translate-y-1">
+                        <div class="absolute top-2 right-2 text-[10px] font-bold bg-red-500 text-white px-1.5 py-0.5 rounded font-mono uppercase">⬇️ Baixo</div>
+                        <span class="text-5xl group-hover:scale-110 transition duration-150 py-3">👻🔴</span>
+                        <div>
+                            <span class="font-bold text-red-400 block text-lg">Blinky (Vermelho)</span>
+                            <span class="text-[10px] text-red-300 font-semibold tracking-wider uppercase block bg-red-950/80 px-2 py-0.5 rounded-full border border-red-500/40 mt-1">Fundamental (Nota Dó)</span>
+                        </div>
+                    </button>
+
+                    <!-- FANTASMA 2 (Seta para Esquerda) -->
+                    <button id="btn-ghost2" onclick="tocarPersonagem('Fantasma 2', 329.63, 'E4')" class="group relative bg-cyan-950/40 border-4 border-cyan-400 rounded-2xl p-4 flex flex-col items-center justify-between gap-3 text-center transition-all duration-150 hover:bg-cyan-900/60 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 transform hover:-translate-y-1">
+                        <div class="absolute top-2 right-2 text-[10px] font-bold bg-cyan-400 text-slate-950 px-1.5 py-0.5 rounded font-mono uppercase">⬅️ Esq</div>
+                        <span class="text-5xl group-hover:scale-110 transition duration-150 py-3">👻🔵</span>
+                        <div>
+                            <span class="font-bold text-cyan-400 block text-lg">Inky (Ciano)</span>
+                            <span class="text-[10px] text-cyan-300 font-semibold tracking-wider uppercase block bg-cyan-950/80 px-2 py-0.5 rounded-full border border-cyan-400/40 mt-1">Terça (Nota Mi)</span>
+                        </div>
+                    </button>
+
+                    <!-- FANTASMA 3 (Seta para Direita) -->
+                    <button id="btn-ghost3" onclick="tocarPersonagem('Fantasma 3', 392.00, 'G4')" class="group relative bg-pink-950/40 border-4 border-pink-400 rounded-2xl p-4 flex flex-col items-center justify-between gap-3 text-center transition-all duration-150 hover:bg-pink-900/60 focus:outline-none focus:ring-4 focus:ring-pink-500/50 transform hover:-translate-y-1">
+                        <div class="absolute top-2 right-2 text-[10px] font-bold bg-pink-400 text-slate-950 px-1.5 py-0.5 rounded font-mono uppercase">➡️ Dir</div>
+                        <span class="text-5xl group-hover:scale-110 transition duration-150 py-3">👻🌸</span>
+                        <div>
+                            <span class="font-bold text-pink-400 block text-lg">Pinky (Rosa)</span>
+                            <span class="text-[10px] text-pink-300 font-semibold tracking-wider uppercase block bg-pink-950/80 px-2 py-0.5 rounded-full border border-pink-400/40 mt-1">Quinta (Nota Sol)</span>
+                        </div>
+                    </button>
+
+                </div>
+
+                <!-- Barra de Aterramento Interativa -->
+                <div class="mt-6 bg-slate-950 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-slate-800 border-2 border-dashed border-slate-600 rounded-lg flex items-center justify-center text-xl text-slate-400">🔌</div>
+                        <div>
+                            <span class="text-sm font-bold block text-white">Barra de Aterramento (Fio Terra)</span>
+                            <span class="text-xs text-slate-400">Obrigatório segurar o circuito no Makey Makey físico!</span>
+                        </div>
+                    </div>
+                    <button id="btn-terra" onmousedown="segurarTerra(true)" onmouseup="segurarTerra(false)" onmouseleave="segurarTerra(false)" ontouchstart="segurarTerra(true)" ontouchend="segurarTerra(false)" class="w-full sm:w-auto px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl border border-slate-600 flex items-center justify-center gap-2 select-none active:bg-yellow-400 active:text-slate-950 transition duration-150">
+                        🤝 CLIQUE E SEGURE PARA CONECTAR O FIO TERRA
+                    </button>
+                </div>
+            </div>
+
+            <!-- EXIBIÇÃO DE LISTAS ESTILO SCRATCH -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- GABARITO (MuseScore) -->
+                <div class="bg-slate-950 border-2 border-red-900/60 rounded-xl p-4 flex flex-col h-48 shadow-lg">
+                    <div class="flex items-center justify-between border-b border-red-950 pb-2 mb-2">
+                        <span class="text-xs font-bold text-red-400 flex items-center gap-1">📋 Lista: GABARITO (Computador)</span>
+                        <span class="text-[10px] bg-red-950 text-red-400 px-2 py-0.5 rounded font-mono" id="gabarito-count">0 itens</span>
+                    </div>
+                    <div id="lista-gabarito" class="flex-grow overflow-y-auto space-y-1 text-sm font-mono text-slate-400">
+                        <div class="text-slate-600 italic text-xs">Vazia - Aguardando ditado...</div>
+                    </div>
+                </div>
+
+                <!-- RESPOSTA DO ALUNO -->
+                <div class="bg-slate-950 border-2 border-green-900/60 rounded-xl p-4 flex flex-col h-48 shadow-lg">
+                    <div class="flex items-center justify-between border-b border-green-950 pb-2 mb-2">
+                        <span class="text-xs font-bold text-green-400 flex items-center gap-1">📋 Lista: RESPOSTA DO ALUNO</span>
+                        <span class="text-[10px] bg-green-950 text-green-400 px-2 py-0.5 rounded font-mono" id="resposta-count">0 itens</span>
+                    </div>
+                    <div id="lista-resposta" class="flex-grow overflow-y-auto space-y-1 text-sm font-mono text-slate-400">
+                        <div class="text-slate-600 italic text-xs">Aguardando suas notas...</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- COLUNA DIREITA: ROID PEDAGÓGICO / GUIA DO PROFESSOR (4 Colunas) -->
+        <aside class="lg:col-span-4 flex flex-col gap-6">
+            
+            <!-- ABAS DO PAINEL LATERAL -->
+            <div class="bg-slate-900 border-2 border-slate-800 rounded-2xl overflow-hidden shadow-lg">
+                <div class="flex border-b border-slate-800 bg-slate-950">
+                    <button onclick="mudarAba('guia')" id="tab-guia" class="flex-1 py-3 text-center text-xs font-bold border-b-2 border-yellow-400 text-yellow-400 focus:outline-none">
+                        👨‍🏫 GUIA DA OFICINA
+                    </button>
+                    <button onclick="mudarAba('materiais')" id="tab-materiais" class="flex-1 py-3 text-center text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 focus:outline-none">
+                        🔌 MATERIAIS / FÍSICO
+                    </button>
+                    <button onclick="mudarAba('pedagogico')" id="tab-pedagogico" class="flex-1 py-3 text-center text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 focus:outline-none">
+                        🎯 EIXOS
+                    </button>
+                </div>
+
+                <div class="p-5 max-h-[640px] overflow-y-auto space-y-4 text-sm text-slate-300">
+                    
+                    <!-- ABA 1: GUIA DA OFICINA (DURAÇÃO: 90 MINUTOS) -->
+                    <div id="conteudo-guia" class="space-y-4">
+                        <div class="bg-indigo-950/50 border border-indigo-900 p-3 rounded-xl">
+                            <h4 class="font-bold text-indigo-300 text-xs uppercase tracking-wider">Cronograma Rápido (90 min)</h4>
+                            <ul class="text-xs space-y-1 mt-2 text-indigo-200 list-disc list-inside">
+                                <li><strong>00-15 min:</strong> Acolhimento & Conceito Makey Makey</li>
+                                <li><strong>15-45 min:</strong> MuseScore (Fábrica de Sons)</li>
+                                <li><strong>45-60 min:</strong> Mapeamento Elétrico</li>
+                                <li><strong>60-80 min:</strong> Dinâmica de Performance</li>
+                                <li><strong>80-90 min:</strong> Reflexão & Conclusão</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-white flex items-center gap-1">📋 Roteiro do Ditado Melódico</h4>
+                            <p class="text-xs text-slate-400 mt-1">Como usar este simulador na sua aula prática:</p>
+                            <ol class="list-decimal list-inside text-xs space-y-2 mt-2">
+                                <li>Clique no botão <strong class="text-yellow-400">Gerar Ditado</strong> do simulador. Ele criará uma sequência aleatória baseada nas vozes e personagens definidos.</li>
+                                <li>Peça para a turma ouvir atentamente. O simulador tocará o ritmo com as alturas correspondentes (<span class="text-red-400">Dó</span>, <span class="text-cyan-400">Mi</span>, <span class="text-pink-400">Sol</span> ou a <span class="text-yellow-400">Tríade</span>).</li>
+                                <li>O estudante, segurando o cabo de aterramento, deve bater nos botões físicos (ou virtuais) do tabuleiro na sequência correta de tempos.</li>
+                                <li>Mostre as listas de <strong class="text-red-400">Gabarito</strong> e <strong class="text-green-400">Resposta</strong> atualizarem dinamicamente, ensinando engenharia de lógica de blocos (Scratch) na prática.</li>
+                            </ol>
+                        </div>
+
+                        <div class="border-t border-slate-800 pt-3">
+                            <h4 class="font-bold text-yellow-400 flex items-center gap-1">🎭 Narrativa "Pacmania" para Improvisação</h4>
+                            <p class="text-xs text-slate-400 italic mt-1">Estimule a performance corpórea guiando esta história:</p>
+                            <div class="bg-slate-950 p-3 rounded-xl text-xs mt-2 border border-slate-800 space-y-2">
+                                <p>"O Pac-Man está navegando de mansinho no labirinto de pautas musicais..." <br><span class="text-yellow-500 font-semibold">(Estudante aperta Pac-Man repetidamente de forma lenta)</span></p>
+                                <p>"De repente, o Blinky surge por trás em ritmo acelerado!" <br><span class="text-red-400 font-semibold">(O fantasma Vermelho toca rápido)</span></p>
+                                <p>"O Pac-Man engole uma super-pílula de oitava e vira o jogo!" <br><span class="text-yellow-400 font-semibold">(Tríade triunfal do Pac-Man)</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA 2: MAKEY MAKEY & CIRCUITO FÍSICO -->
+                    <div id="conteudo-materials" class="hidden space-y-4">
+                        <div class="bg-yellow-950/30 border border-yellow-800/40 p-4 rounded-xl text-xs">
+                            <h4 class="font-bold text-yellow-400 uppercase tracking-widest text-xs mb-2">Conexões no Tabuleiro Físico</h4>
+                            <p class="text-slate-300">Conecte os cabos jacaré entre a placa Makey Makey e as áreas de grafite/papel alumínio condutivo do seu tabuleiro físico:</p>
+                            <ul class="space-y-2 mt-3 font-mono text-[11px]">
+                                <li class="flex items-center justify-between"><span class="text-yellow-400">🍕 Pac-Man:</span> <span class="text-slate-400">Seta Cima / Espaço</span></li>
+                                <li class="flex items-center justify-between"><span class="text-red-400">🔴 Fantasma 1:</span> <span class="text-slate-400">Seta Baixo</span></li>
+                                <li class="flex items-center justify-between"><span class="text-cyan-400">🔵 Fantasma 2:</span> <span class="text-slate-400">Seta Esquerda</span></li>
+                                <li class="flex items-center justify-between"><span class="text-pink-400">🌸 Fantasma 3:</span> <span class="text-slate-400">Seta Direita</span></li>
+                                <li class="flex items-center justify-between"><span class="text-green-400">⚡ Aterramento:</span> <span class="text-slate-400">Placa Earth (Terra)</span></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-white flex items-center gap-1">🛠️ O Conceito Elétrico</h4>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                                Ao segurar a garra jacaré conectada à porta <strong>Earth</strong> da placa Makey Makey, você se torna o condutor elétrico (Fio Terra). Ao tocar em qualquer dos personagens condutivos com a outra mão, você fecha o circuito elétrico. A placa simula o pressionamento instantâneo de um botão do teclado, disparando o som da nota correspondente.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs">
+                            <span class="text-amber-500 font-bold block mb-1">Dica de Aula:</span>
+                            Trabalhe com materiais de fácil acesso para construir o tabuleiro: folhas de papel sulfite desenhadas, placas de papelão revestidas com papel alumínio, argila condutiva ou fita condutiva de cobre.
+                        </div>
+                    </div>
+
+                    <!-- ABA 3: EIXOS PEDAGÓGICOS -->
+                    <div id="conteudo-pedagogico" class="hidden space-y-4">
+                        <div class="border-l-4 border-emerald-500 pl-3">
+                            <h4 class="font-bold text-emerald-400">Eixo Tecnológico-Criativo</h4>
+                            <p class="text-xs text-slate-400 mt-1">
+                                Desmistifica o ensino musical digital. Os computadores, programas e placas são vistos não como passatempo, mas como ferramentas de design de áudio ativo e composição de novos universos.
+                            </p>
+                        </div>
+
+                        <div class="border-l-4 border-indigo-500 pl-3">
+                            <h4 class="font-bold text-indigo-400">Eixo Corpóreo-Interativo</h4>
+                            <p class="text-xs text-slate-400 mt-1">
+                                A neurobiologia da música comprova que conectar o estímulo auditivo ao toque tátil e ao movimento físico aumenta a retenção cognitiva. A teoria das alturas e dos ritmos ganha corpo através do movimento.
+                            </p>
+                        </div>
+
+                        <div class="border-l-4 border-amber-500 pl-3">
+                            <h4 class="font-bold text-amber-400">Eixo da Gamificação</h4>
+                            <p class="text-xs text-slate-400 mt-1">
+                                Retira o peso da performance excessiva. O erro de digitação melódica não é punido de forma tradicional, mas transformado em uma "tentativa lúdica do jogo", mantendo a atenção e os níveis de engajamento saudáveis e motivadores.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CONTROLE DE INSTRUMENTO DO SINTETIZADOR (WEB AUDIO) -->
+            <div class="bg-slate-900 border-2 border-slate-800 rounded-2xl p-5 shadow-lg space-y-3">
+                <h3 class="text-sm font-bold text-slate-300 flex items-center justify-between">
+                    <span>🎛️ TIMBRE DO SIMULADOR</span>
+                    <span class="text-[10px] bg-indigo-950 text-indigo-400 px-2 py-0.5 rounded font-mono">Web Audio API</span>
+                </h3>
+                
+                <div class="space-y-2">
+                    <label class="text-xs text-slate-400 font-semibold block">Tipo de Onda do Oscilador:</label>
+                    <div class="grid grid-cols-4 gap-1.5">
+                        <button onclick="mudarTipoOnda('sine')" id="wave-sine" class="py-1 text-center bg-slate-800 hover:bg-slate-700 text-[10px] font-bold rounded-lg focus:outline-none text-slate-400 border border-transparent">Senoide</button>
+                        <button onclick="mudarTipoOnda('triangle')" id="wave-triangle" class="py-1 text-center bg-slate-800 hover:bg-slate-700 text-[10px] font-bold rounded-lg focus:outline-none text-slate-400 border border-transparent">Triâng.</button>
+                        <button onclick="mudarTipoOnda('sawtooth')" id="wave-sawtooth" class="py-1 text-center bg-indigo-600 text-white text-[10px] font-bold rounded-lg focus:outline-none border border-indigo-500">Dente S.</button>
+                        <button onclick="mudarTipoOnda('square')" id="wave-square" class="py-1 text-center bg-slate-800 hover:bg-slate-700 text-[10px] font-bold rounded-lg focus:outline-none text-slate-400 border border-transparent">Quadr.</button>
+                    </div>
+                </div>
+
+                <div class="pt-2 border-t border-slate-800/60 flex items-center justify-between">
+                    <span class="text-xs text-slate-400">Volume Geral:</span>
+                    <input type="range" id="controle-volume" min="0" max="0.5" step="0.05" value="0.25" class="w-32 accent-yellow-400">
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-4 px-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>© 2026 - Metodologia Orff & Gamificação: Simulador "Pacmania Musical" para ensino de pauta e alturas.</p>
+            <p class="flex items-center gap-1">Desenvolvido com <span class="text-red-500">♥</span> para educadores musicais inovadores.</p>
+        </div>
+    </footer>
+
+    <!-- LOGICA DO JOGO EM JAVASCRIPT -->
+    <script>
+        // CONFIGURAÇÕES DO SINTETIZADOR WEB AUDIO API
+        let audioCtx = null;
+        let oscillatorType = 'sawtooth'; // Padrão "8-bit" para dar clima retrô
+        
+        // Mapeamento de Frequências (Tonalidade de Dó Maior - Tríade Básica)
+        const notasFreq = {
+            'Pac-Man': { freq: [261.63, 329.63, 392.00], label: 'Tríade C-E-G', visual: '📐' }, // Dó, Mi, Sol tocados juntos/arpejados
+            'Fantasma 1': { freq: 261.63, label: 'Dó (Fundamental)', visual: '🔴' },
+            'Fantasma 2': { freq: 329.63, label: 'Mi (Terça)', visual: '🔵' },
+            'Fantasma 3': { freq: 392.00, label: 'Sol (Quinta)', visual: '🌸' }
         };
 
-        function playNote(freqs) {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
+        // ESTADO GLOBAL DO JOGO (Scratch)
+        let listaGabarito = [];
+        let listaRespostaAluno = [];
+        let pontuacaoClaves = 0;
+        let totalErros = 0;
+        let terraConectado = true; // No simulador web habilitamos por padrão para garantir usabilidade sem mouse, mas permitimos desativar
+        let ditadoAtivo = false;
+        let escutandoGabarito = false;
+
+        // INICIALIZAÇÃO DO AUDIO CONTEXT
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        // Toca som de um personagem específico
+        function playTone(freqOrArray, duration = 0.4) {
+            initAudio();
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            const volumeInput = parseFloat(document.getElementById('controle-volume').value);
             
-            freqs.forEach(f => {
+            if (Array.isArray(freqOrArray)) {
+                // Toca como um arpejo rápido para simular o Pacman andando e comendo tríades
+                freqOrArray.forEach((freq, idx) => {
+                    setTimeout(() => {
+                        const osc = audioCtx.createOscillator();
+                        const gainNode = audioCtx.createGain();
+                        
+                        osc.type = oscillatorType;
+                        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                        
+                        gainNode.gain.setValueAtTime(volumeInput, audioCtx.currentTime);
+                        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+                        
+                        osc.connect(gainNode);
+                        gainNode.connect(audioCtx.destination);
+                        
+                        osc.start();
+                        osc.stop(audioCtx.currentTime + duration);
+                    }, idx * 80);
+                });
+            } else {
+                // Toca uma nota simples de forma contínua
                 const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
+                const gainNode = audioCtx.createGain();
                 
-                osc.type = 'square';
-                osc.frequency.setValueAtTime(f, audioCtx.currentTime);
+                osc.type = oscillatorType;
+                osc.frequency.setValueAtTime(freqOrArray, audioCtx.currentTime);
                 
-                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.8);
+                gainNode.gain.setValueAtTime(volumeInput, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
                 
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
+                osc.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
                 
                 osc.start();
-                osc.stop(audioCtx.currentTime + 0.8);
-            });
-        }
-
-        function handleInput(key) {
-            const el = document.getElementById(`key-${key.toLowerCase()}`);
-            if (el) {
-                el.classList.add('active');
-                playNote(NOTES[key.toLowerCase()] || []);
-                setTimeout(() => el.classList.remove('active'), 200);
+                osc.stop(audioCtx.currentTime + duration);
             }
         }
 
-        window.addEventListener('keydown', (e) => {
-            const key = e.key.toLowerCase();
-            if (['arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) {
-                handleInput(key);
+        // Efeito sonoro de Acerto (Fanfarra rápida)
+        function playSuccessSound() {
+            initAudio();
+            const volumeInput = parseFloat(document.getElementById('controle-volume').value);
+            const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+            notes.forEach((freq, idx) => {
+                setTimeout(() => {
+                    const osc = audioCtx.createOscillator();
+                    const gainNode = audioCtx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                    gainNode.gain.setValueAtTime(volumeInput, audioCtx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+                    osc.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.3);
+                }, idx * 100);
+            });
+        }
+
+        // Efeito sonoro de Game Over (Clássico Pac-Man decrescente)
+        function playGameOverSound() {
+            initAudio();
+            const volumeInput = parseFloat(document.getElementById('controle-volume').value);
+            const notes = [392.00, 369.99, 349.23, 311.13, 261.63]; // G4, F#4, F4, D#4, C4
+            notes.forEach((freq, idx) => {
+                setTimeout(() => {
+                    const osc = audioCtx.createOscillator();
+                    const gainNode = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                    gainNode.gain.setValueAtTime(volumeInput, audioCtx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+                    osc.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                }, idx * 120);
+            });
+        }
+
+        // CONTROLAR CONEXÃO TERRA
+        function segurarTerra(ativo) {
+            terraConectado = ativo;
+            const statusCircuito = document.getElementById('status-circuito');
+            if (ativo) {
+                statusCircuito.classList.remove('bg-red-500');
+                statusCircuito.classList.add('bg-green-400');
+                document.getElementById('btn-terra').classList.remove('bg-slate-800');
+                document.getElementById('btn-terra').classList.add('bg-yellow-400', 'text-slate-950');
+            } else {
+                statusCircuito.classList.remove('bg-green-400');
+                statusCircuito.classList.add('bg-red-500');
+                document.getElementById('btn-terra').classList.remove('bg-yellow-400', 'text-slate-950');
+                document.getElementById('btn-terra').classList.add('bg-slate-800');
+            }
+        }
+
+        // ALTERAR TIPO DE TIMBRE DO OSCILADOR
+        function mudarTipoOnda(tipo) {
+            oscillatorType = tipo;
+            ['sine', 'triangle', 'sawtooth', 'square'].forEach(id => {
+                const el = document.getElementById(`wave-${id}`);
+                if (id === tipo) {
+                    el.className = "py-1 text-center bg-indigo-600 text-white text-[10px] font-bold rounded-lg focus:outline-none border border-indigo-500";
+                } else {
+                    el.className = "py-1 text-center bg-slate-800 hover:bg-slate-700 text-[10px] font-bold rounded-lg focus:outline-none text-slate-400 border border-transparent";
+                }
+            });
+        }
+
+        // SISTEMA DE GUIA DE ABAS DO PROFESSOR
+        function mudarAba(aba) {
+            ['guia', 'materials', 'pedagogico'].forEach(id => {
+                const btn = document.getElementById(`tab-${id}`);
+                const conteudo = document.getElementById(`conteudo-${id}`);
+                
+                if (id === aba) {
+                    btn.classList.add('border-yellow-400', 'text-yellow-400');
+                    btn.classList.remove('border-transparent', 'text-slate-400');
+                    conteudo.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('border-yellow-400', 'text-yellow-400');
+                    btn.classList.add('border-transparent', 'text-slate-400');
+                    conteudo.classList.add('hidden');
+                }
+            });
+        }
+
+        // GERAR NOVO DITADO MUSICAL (Nível 1)
+        function gerarNovoDitado() {
+            if (escutandoGabarito) return;
+            
+            const tamanho = parseInt(document.getElementById('config-tamanho').value);
+            listaGabarito = [];
+            listaRespostaAluno = [];
+            
+            const chaves = Object.keys(notasFreq);
+            
+            for (let i = 0; i < tamanho; i++) {
+                const randomChar = chaves[Math.floor(Math.random() * chaves.length)];
+                listaGabarito.push(randomChar);
+            }
+
+            // Atualiza as listas na interface (Scratch Style)
+            desenharLista('lista-gabarito', listaGabarito);
+            desenharLista('lista-resposta', listaRespostaAluno);
+            document.getElementById('gabarito-count').innerText = `${listaGabarito.length} itens`;
+            document.getElementById('resposta-count').innerText = "0 itens";
+            
+            // Habilita reprodução
+            document.getElementById('btn-reproduzir').disabled = false;
+            ditadoAtivo = true;
+
+            // Inicia reprodução automática para facilitar
+            reproduzirGabarito();
+        }
+
+        // REPRODUZIR GABARITO (Fase de Escuta)
+        function reproduzirGabarito() {
+            if (listaGabarito.length === 0 || escutandoGabarito) return;
+            
+            escutandoGabarito = true;
+            document.getElementById('btn-reproduzir').disabled = true;
+            document.getElementById('pauta-modo').innerText = "Modo: Escutando...";
+            document.getElementById('pauta-modo').className = "text-xs bg-red-500 text-white font-bold px-2 py-0.5 rounded flex items-center gap-1 animate-pulse";
+            
+            const statusMsg = document.getElementById('mensagem-status');
+            statusMsg.innerHTML = `👂 <strong>Fase de Escuta:</strong> Preste atenção nas notas que estão soando!`;
+            statusMsg.className = "mt-4 bg-yellow-950/40 border border-yellow-900/60 p-3 rounded-xl text-center text-sm font-semibold text-yellow-300 flex items-center justify-center gap-2";
+
+            limparPautaVisual();
+
+            let delay = 0;
+            listaGabarito.forEach((char, idx) => {
+                setTimeout(() => {
+                    // Highlight do botão
+                    destacarBotaoVirtual(char);
+                    
+                    // Desenha a nota correspondente na Pauta
+                    adicionarNotaPautaVisual(char, idx + 1);
+
+                    // Toca som do personagem
+                    const notaObj = notasFreq[char];
+                    playTone(notaObj.freq, 0.5);
+
+                    if (idx === listaGabarito.length - 1) {
+                        setTimeout(() => {
+                            finalizarEscuta();
+                        }, 800);
+                    }
+                }, delay);
+                delay += 800; // Tempo entre cada nota do ditado (Mínima / Semínima)
+            });
+        }
+
+        function finalizarEscuta() {
+            escutandoGabarito = false;
+            document.getElementById('btn-reproduzir').disabled = false;
+            document.getElementById('pauta-modo').innerText = "Modo: Toque sua Resposta!";
+            document.getElementById('pauta-modo').className = "text-xs bg-green-500 text-white font-bold px-2 py-0.5 rounded flex items-center gap-1";
+            
+            const statusMsg = document.getElementById('mensagem-status');
+            statusMsg.innerHTML = `👉 <strong>Fase de Ação:</strong> Toque no circuito ou nas setas do seu teclado seguindo a sequência!`;
+            statusMsg.className = "mt-4 bg-emerald-950/40 border border-emerald-900/60 p-3 rounded-xl text-center text-sm font-semibold text-emerald-300 flex items-center justify-center gap-2 animate-pulse";
+        }
+
+        // AÇÃO DO ESTUDANTE AO TOCAR UM PERSONAGEM
+        function tocarPersonagem(personagem, freq, label) {
+            // Se o usuário não estiver simulando o "fio terra", o circuito não se fecha! (Didática Makey Makey)
+            if (!terraConectado) {
+                exibirErroCircuitoAberto();
+                return;
+            }
+
+            // Ativa som e animação visual do botão correspondente
+            destacarBotaoVirtual(personagem);
+            
+            const somConfig = notasFreq[personagem];
+            playTone(somConfig.freq, 0.4);
+
+            // Se um ditado do jogo estiver ativo, adiciona a lista do aluno
+            if (ditadoAtivo && !escutandoGabarito) {
+                listaRespostaAluno.push(personagem);
+                desenharLista('lista-resposta', listaRespostaAluno);
+                document.getElementById('resposta-count').innerText = `${listaRespostaAluno.length} itens`;
+
+                // Desenha nota digitada na pauta
+                adicionarNotaPautaVisual(personagem, listaRespostaAluno.length, true);
+
+                // Compara as listas passo a passo
+                const indexAtual = listaRespostaAluno.length - 1;
+                
+                if (listaRespostaAluno[indexAtual] !== listaGabarito[indexAtual]) {
+                    // Errou! clássico Game Over toca
+                    totalErros++;
+                    document.getElementById('placar-erros').innerText = totalErros;
+                    ditadoAtivo = false;
+                    
+                    setTimeout(() => {
+                        playGameOverSound();
+                        const statusMsg = document.getElementById('mensagem-status');
+                        statusMsg.innerHTML = `👾 <strong>GAME OVER!</strong> Você errou a nota. Redefinindo o desafio... (-5 notas)`;
+                        statusMsg.className = "mt-4 bg-red-950/40 border border-red-900/60 p-3 rounded-xl text-center text-sm font-semibold text-red-300 flex items-center justify-center gap-2";
+                        pontuacaoClaves = Math.max(0, pontuacaoClaves - 5);
+                        document.getElementById('placar-claves').innerText = pontuacaoClaves;
+                        marcarErroPautaVisual(indexAtual + 1);
+                    }, 200);
+
+                } else if (listaRespostaAluno.length === listaGabarito.length) {
+                    // Acertou a sequência inteira!
+                    pontuacaoClaves += 10;
+                    document.getElementById('placar-claves').innerText = pontuacaoClaves;
+                    ditadoAtivo = false;
+
+                    setTimeout(() => {
+                        playSuccessSound();
+                        const statusMsg = document.getElementById('mensagem-status');
+                        statusMsg.innerHTML = `🌟 <strong>Parabéns!</strong> Você capturou os fantasmas na sequência! +10 Claves de Sol!`;
+                        statusMsg.className = "mt-4 bg-yellow-950/55 border border-yellow-500 p-3 rounded-xl text-center text-sm font-semibold text-yellow-300 flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/10";
+                        marcarSucessoPautaVisual();
+                    }, 200);
+                }
+            }
+        }
+
+        // MOSTRAR AVISO DE CIRCUITO ABERTO (Falta de terra)
+        function exibirErroCircuitoAberto() {
+            const statusMsg = document.getElementById('mensagem-status');
+            statusMsg.innerHTML = `⚠️ <strong>Aviso de Engenharia:</strong> O circuito está aberto! Clique e segure a barra de aterramento (Fio Terra) abaixo para fechar o circuito!`;
+            statusMsg.className = "mt-4 bg-amber-950/40 border border-amber-900/60 p-3 rounded-xl text-center text-sm font-semibold text-amber-300 flex items-center justify-center gap-2";
+        }
+
+        // DESENHAR ELEMENTOS NAS LISTAS INTERATIVAS (ESTILO SCRATCH)
+        function desenharLista(idElemento, lista) {
+            const container = document.getElementById(idElemento);
+            if (lista.length === 0) {
+                container.innerHTML = `<div class="text-slate-600 italic text-xs">Vazia - Toque no tabuleiro...</div>`;
+                return;
+            }
+
+            container.innerHTML = lista.map((item, index) => {
+                let corClasse = "text-yellow-400";
+                if (item === 'Fantasma 1') corClasse = "text-red-400";
+                if (item === 'Fantasma 2') corClasse = "text-cyan-400";
+                if (item === 'Fantasma 3') corClasse = "text-pink-400";
+                
+                return `<div class="bg-slate-900 border border-slate-800 px-2 py-1 rounded flex items-center justify-between text-xs">
+                    <span>${index + 1}: <strong class="${corClasse}">${item}</strong></span>
+                    <span class="text-[10px] text-slate-500">tato ativo</span>
+                </div>`;
+            }).join('');
+        }
+
+        // DESTACAR VISUALMENTE O BOTÃO VIRTUAL COM FEEDBACK DE COR E SINAL DE FECHAMENTO
+        function destacarBotaoVirtual(personagem) {
+            let id = '';
+            if (personagem === 'Pac-Man') id = 'btn-pacman';
+            if (personagem === 'Fantasma 1') id = 'btn-ghost1';
+            if (personagem === 'Fantasma 2') id = 'btn-ghost2';
+            if (personagem === 'Fantasma 3') id = 'btn-ghost3';
+
+            const botao = document.getElementById(id);
+            if (!botao) return;
+
+            botao.classList.add('scale-95', 'brightness-125');
+            setTimeout(() => {
+                botao.classList.remove('scale-95', 'brightness-125');
+            }, 150);
+        }
+
+        // MANIPULAR PAUTA MUSICAL VISUAL
+        const notasPosicionamentoPauta = {
+            'Pac-Man': { top: '30%', nota: 'Tríade (C4-E4-G4)', cor: 'text-yellow-500' },
+            'Fantasma 1': { top: '65%', nota: 'C4 (Dó)', cor: 'text-red-500' },
+            'Fantasma 2': { top: '50%', nota: 'E4 (Mi)', cor: 'text-cyan-500' },
+            'Fantasma 3': { top: '35%', nota: 'G4 (Sol)', cor: 'text-pink-500' }
+        };
+
+        function limparPautaVisual() {
+            document.getElementById('pauta-container').innerHTML = '';
+        }
+
+        function adicionarNotaPautaVisual(personagem, tempo, respostaAluno = false) {
+            const container = document.getElementById('pauta-container');
+            const config = notasPosicionamentoPauta[personagem];
+            if (!config) return;
+
+            // Remove aviso inicial se for a primeira nota
+            if (container.innerText.includes('Nenhuma nota')) {
+                container.innerHTML = '';
+            }
+
+            // Verifica se a nota desse tempo já existe e remove (para atualizar)
+            const notaId = `nota-tempo-${tempo}`;
+            const notaExistente = document.getElementById(notaId);
+            if (notaExistente) notaExistente.remove();
+
+            const notaHTML = `
+                <div id="${notaId}" class="absolute flex flex-col items-center select-none" style="top: ${config.top}; left: ${(tempo - 1) * 20 + 5}%; transform: translateY(-50%); width: 40px;">
+                    <span class="text-3xl ${config.cor} font-bold leading-none transform -rotate-12 hover:scale-110 cursor-pointer transition">♩</span>
+                    <span class="text-[9px] font-bold text-slate-700 bg-slate-100 rounded px-1 -mt-1 font-mono">${config.nota}</span>
+                    ${respostaAluno ? `<span class="text-[7px] text-emerald-600 font-bold uppercase tracking-widest mt-0.5">Aluno</span>` : ''}
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', notaHTML);
+        }
+
+        function marcarErroPautaVisual(tempoErrado) {
+            const notaDiv = document.getElementById(`nota-tempo-${tempoErrado}`);
+            if (notaDiv) {
+                notaDiv.insertAdjacentHTML('beforeend', `<span class="text-xs absolute -top-4 text-red-600 font-bold">❌</span>`);
+            }
+        }
+
+        function marcarSucessoPautaVisual() {
+            const container = document.getElementById('pauta-container');
+            const notas = container.children;
+            for (let i = 0; i < notas.length; i++) {
+                notas[i].insertAdjacentHTML('beforeend', `<span class="text-xs absolute -top-4 text-emerald-500 font-bold animate-bounce">⭐</span>`);
+            }
+        }
+
+        // MAPEAMENTO DO TECLADO DO MAKEY MAKEY (SIMULAÇÃO FÍSICA)
+        window.addEventListener('keydown', function(event) {
+            // Se o usuário clicar em campos de formulário, ignore o disparo do jogo
+            if (event.target.tagName === 'INPUT' || event.target.tagName === 'SELECT') return;
+
+            if (event.code === 'Space') {
+                event.preventDefault();
+                segurarTerra(true);
+            }
+
+            // No Makey Makey, as conexões elétricas simulam teclas comuns
+            if (event.code === 'ArrowUp' || event.code === 'KeyW') {
+                event.preventDefault();
+                tocarPersonagem('Pac-Man', 261.63, 'C4');
+            }
+            if (event.code === 'ArrowDown' || event.code === 'KeyS') {
+                event.preventDefault();
+                tocarPersonagem('Fantasma 1', 261.63, 'C4');
+            }
+            if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
+                event.preventDefault();
+                tocarPersonagem('Fantasma 2', 329.63, 'E4');
+            }
+            if (event.code === 'ArrowRight' || event.code === 'KeyD') {
+                event.preventDefault();
+                tocarPersonagem('Fantasma 3', 392.00, 'G4');
             }
         });
 
-        document.querySelectorAll('.arcade-btn').forEach(btn => {
-            btn.addEventListener('mousedown', () => {
-                const key = btn.id.split('-')[1];
-                handleInput(key);
-            });
+        window.addEventListener('keyup', function(event) {
+            if (event.code === 'Space') {
+                event.preventDefault();
+                segurarTerra(false);
+            }
         });
+
+        // Configura volume inicial
+        window.onload = function() {
+            // Inicializa a interface limpando pauta
+            limparPautaVisual();
+            document.getElementById('pauta-container').innerHTML = `<div class="text-slate-400 italic text-sm text-center w-full">Nenhuma nota ativa. Gere um ditado ou toque nos personagens!</div>`;
+        };
     </script>
 </body>
 </html>
+
+
+### Detalhes Pedagógicos implementados nesta Aplicação:
+- **Tecnologia & Som Real**: Utiliza a *Web Audio API* nativa do navegador para sintetizar ondas em tempo real. Isso significa que a aplicação é extremamente veloz, não precisa carregar arquivos de áudio externos grandes e simula o ambiente do BandLab.
+- **Teclas do Teclado (Makey Makey)**: O estudante pode jogar clicando diretamente nos botões virtuais ou conectando uma placa Makey Makey física. O código está mapeado para:
+  - **Seta para Cima**: Pac-Man (Tríade Dó-Mi-Sol)
+  - **Seta para Baixo**: Fantasma 1 (Dó)
+  - **Seta para Esquerda**: Fantasma 2 (Mi)
+  - **Seta para Direita**: Fantasma 3 (Sol)
+  - **Barra de Espaço (Segurar)**: Simula o cabo de aterramento. Para fins de testes, ao jogar no computador, a barra de aterramento já inicia ativa por padrão, mas é possível clicar e manter o mouse pressionado no botão de aterramento para exemplificar aos alunos o conceito físico.
+- **Apoio ao Instrutor**: O Painel do Professor integrado permite ao instrutor realizar leituras de roteiros lúdicos, explicar conceitos sobre os circuitos elétricos fechados e verificar a neurobiologia da música sem ter de sair da página do jogo.
+
+
+
+O Gemini não é humano. Ele pode cometer erros. Por isso, é bom checar as respostas.
+
